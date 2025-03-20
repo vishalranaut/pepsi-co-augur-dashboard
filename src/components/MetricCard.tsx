@@ -24,15 +24,15 @@ export const MetricCard: React.FC<MetricCardProps> = ({
   };
 
   return (
-    <div className={`bg-white rounded-lg p-6 shadow-md ${className}`}>
-      <h3 className="text-sm font-medium text-gray-500">{title}</h3>
+    <div className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md ${className}`}>
+      <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">{title}</h3>
       <div className="mt-2 flex items-baseline">
-        <p className="text-2xl font-semibold text-gray-900">
+        <p className="text-2xl font-semibold text-gray-900 dark:text-white">
           {formatValue(value)}{unit}
         </p>
         {trend !== undefined && (
           <span className={`ml-2 flex items-center text-sm ${
-            trend >= 0 ? 'text-green-600' : 'text-red-600'
+            trend >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
           }`}>
             {trend >= 0 ? (
               <ArrowUp className="h-4 w-4" />
